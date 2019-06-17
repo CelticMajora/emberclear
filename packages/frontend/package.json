@@ -48,7 +48,8 @@
     "tweetnacl": "^1.0.1",
     "tweetnacl-util": "^0.15.0",
     "url-parse": "^1.4.0",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "xstate": "^4.6.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
