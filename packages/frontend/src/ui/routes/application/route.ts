@@ -13,6 +13,8 @@ export default class ApplicationRoute extends Route {
   @service currentUser!: CurrentUserService;
   @service relayManager!: RelayManager;
   @service locale!: LocaleService;
+  @service('current-user/transfer-to-device') transfer;
+
 
   async beforeModel() {
     await runMigrations(getOwner(this));
@@ -21,6 +23,8 @@ export default class ApplicationRoute extends Route {
     // TODO: check all the modern web requirements
     await this.locale.setLocale(this.locale.currentLocale);
     await this.currentUser.load();
+
+    this.transfer.test();
   }
 
   async model() {
